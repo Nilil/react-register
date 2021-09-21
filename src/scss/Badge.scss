@@ -1,0 +1,43 @@
+body {
+  background-color: grey;
+}
+
+.badge {
+  block-size: auto;
+  inline-size: 90vw;
+  border: 1px solid pink;
+
+  &__top {
+    inline-size: 100%;
+    block-size: 5vh;
+    background-color: purple;
+    border-radius: 5%;
+  }
+
+  &__user {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 4%;
+
+    & img {
+      inline-size: 20%;
+      border-radius: 50%;
+    }
+  }
+
+  &__data {
+    background-color: lightpink;
+    text-align: center;
+
+    &-user {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  }
+
+  &__hastag {
+    text-align: center;
+  }
+}

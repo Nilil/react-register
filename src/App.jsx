@@ -1,13 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
 import React from 'react';
 
-import {Badge} from './Badge';
+import {Registration} from './pages/Registration';
 
-function App(props) {
+function App() {
   return (
     <React.Fragment>
-      <Badge/>
+      <Registration/>
     </React.Fragment>
   )
 }
