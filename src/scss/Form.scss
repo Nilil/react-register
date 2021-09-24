@@ -1,0 +1,32 @@
+.form-container {
+  block-size: auto;
+  inline-size: 90vw;
+  border: 1px solid blue;
+
+  &--title {
+    text-align: center;
+  }
+
+  &__fields {
+    display: block;
+
+    &-block {
+      margin: 7% 0;
+    }
+
+    &-text {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    & input {
+      margin-top: 3%;
+      inline-size: 90%;
+    }
+  }
+
+  &-btn {
+    block-size: 20px;
+    inline-size: 50%;
+  }
+}

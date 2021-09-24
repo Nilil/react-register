@@ -10,14 +10,14 @@ function Badge (props) {
       <h2>{props.userName}</h2>
     </div>
     <div className="badge__data">
-      <p>Fronted Dev</p>
+      {/* <p>{props.userStaff}</p> */}
       <div className='badge__data-user'>
         <img src="/" alt="Social network" />
-        <a href="">{props.userAccount}</a>
+        <p >#{props.userFavGender}Lover</p>
         <img src="/" alt="Country" />
       </div>
     </div>
-    <p className='badge__hastag'>#reactLover</p>
+    <p className='badge__hastag'>Say Hi!</p>
   </section>
   )
 };

@@ -5,6 +5,12 @@ import {Form} from '../components/Form'
 import '../scss/Registration.scss';
 
 function Registration () {
+
+  const [nameData, setNameData] = React.useState('');
+  const [genderData, setGenderData] = React.useState('');
+  const [emailData, setEmailData] = React.useState('');
+  // const [staffData, setStaffData] =React.useState('')
+
   return (
     <section>
       <header>
@@ -14,11 +20,17 @@ function Registration () {
         <img src="https://image.freepik.com/vector-gratis/fondo-luces-neon_23-2148465779.jpg" alt="Fondo" />
       </div>
       <main>
-        <Badge
-          userName = 'Paquito'
-          userAccount = 'Twitter'
+        <Form
+          setNameData = {setNameData}
+          setGenderData = {setGenderData}
+          setEmailData = {setEmailData}
+          // setuserStaff = {setStaffData}
         />
-        <Form/>
+        <Badge
+          userName = {nameData}
+          userFavGender = {genderData}
+          // userStaff = {staffData}
+        />
       </main>
     </section>
   )
