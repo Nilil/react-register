@@ -1,13 +1,21 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+
+import {Layout} from '../components/Layout';
+import {Link} from 'react-router-dom';
 
 function Main () {
   return (
-    <nav>
-      <Link to="/registration">Resgistration</Link>
-      <br/>
-      <Link to="/error">Error</Link>
-    </nav>
+    <React.Fragment>
+      <Layout>
+        <nav>
+          <Link to="/registration">Resgistration</Link>
+          <br/>
+          <Link to="/assistant">Assistants</Link>
+          <br/>
+          <Link to="/404">Error</Link>
+        </nav>
+      </Layout>
+    </React.Fragment>
   )
 }
 
