@@ -1,29 +1,17 @@
 import React from 'react';
 import '../scss/Form.scss';
 
-function Form ( {nameData, setNameData, genderData, setGenderData, emailData, setEmailData /*,staffData, setStaffData*/} ) {
+function Form ( {nameData, setNameData, countryData, setCountryData, webData, setWebData} ) {
 
   const onChangeName = event => {
-    console.log(event.target.value);
     setNameData(event.target.value);
-}
-const onChangeGender = event => {
-  console.log(event.target.value);
-  setGenderData(event.target.value);
-}
-const onChangeEmail = event => {
-  console.log(event.target.value);
-  setEmailData(event.target.value);
-}
-
-// const onClickStaffY = () => {
-//   console.log('Yes');
-//   setStaffData('STAFF')
-// }
-// const onClickStaffN = () => {
-//   console.log('No');
-//   setStaffData('GUEST')
-// }
+  }
+  const onChangeCountry = event => {
+    setCountryData(event.target.value);
+  }
+  const onChangeWeb = event => {
+    setWebData(event.target.value);
+  }
 
   const onClickSubmit = () => console.log('Clickeado');
 
@@ -34,44 +22,40 @@ const onChangeEmail = event => {
         <form action="" className='form-container__fields'>
 
           <div className='form-container__fields-block'>
-            <label htmlFor="name" className='form-container__fields-text'>Name</label>
+            <label htmlFor="name" className='form-container__fields-text'>Full name</label>
             <input
             type="text"
             onChange = {onChangeName}
             name='name'
             id="name"
-            placeholder='Midori Hanoi'
+            placeholder='User name'
             value={nameData}
             />
           </div>
 
           <div className='form-container__fields-block'>
-            <label htmlFor="favorite-gender" className='form-container__fields-text'>Your favorite movie gender</label>
+            <label htmlFor="country" className='form-container__fields-text'>Your country</label>
             <input
             type="text"
-            onChange = {onChangeGender}
-            name='favorite-gender'
-            id="favorite-gender"
-            placeholder='SciFi'
-            value={genderData}
+            onChange = {onChangeCountry}
+            name='country'
+            id="country"
+            placeholder='M&eacute;xico'
+            value={countryData}
             />
           </div>
 
           <div className='form-container__fields-block'>
-            <label htmlFor="email" className='form-container__fields-text'>Email</label>
+            <label htmlFor="web" className='form-container__fields-text'>Your web page</label>
             <input
-            type="email"
-            onChange = {onChangeEmail}
-            name='email'
-            id="email"
-            placeholder='example@test.com'
-            value={emailData}
+            type="text"
+            onChange = {onChangeWeb}
+            name='web'
+            id="web"
+            placeholder='example.com'
+            value={webData}
             />
           </div>
-
-          {/* <label htmlFor="status">Are you a Staff member?</label>
-          <button type='button' onClick={onClickStaffN} >No</button>
-          <button type='button' onClick={onClickStaffY} >Yes</button> */}
 
         </form>
         <button 

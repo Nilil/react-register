@@ -9,9 +9,8 @@ import '../scss/Registration.scss';
 function Registration () {
 
   const [nameData, setNameData] = React.useState('');
-  const [genderData, setGenderData] = React.useState('');
-  const [emailData, setEmailData] = React.useState('');
-  // const [staffData, setStaffData] =React.useState('')
+  const [countryData, setCountryData] = React.useState('');
+  const [webData, setWebData] = React.useState('');
 
   return (
     <React.Fragment>
@@ -22,14 +21,13 @@ function Registration () {
         <main>
           <Form
             setNameData = {setNameData}
-            setGenderData = {setGenderData}
-            setEmailData = {setEmailData}
-            // setuserStaff = {setStaffData}
+            setCountryData = {setCountryData}
+            setWebData = {setWebData}
           />
           <Badge
-            userName = {nameData}
-            userFavGender = {genderData}
-            // userStaff = {staffData}
+            userName = {nameData || 'User name'}
+            userCountry = {countryData || 'Mexico'}
+            userWeb = {webData || '26'}
           />
         </main>
       </Layout>
