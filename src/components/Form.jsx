@@ -1,25 +1,22 @@
 import React from 'react';
 import '../scss/Form.scss';
 
-function Form ( {nameData, setNameData, countryData, setCountryData, webData, setWebData} ) {
+function Form ({nameData, setNameData, countryData, setCountryData, ageData, setAgeData}) {
 
-  const onChangeName = event => {
-    setNameData(event.target.value);
-  }
-  const onChangeCountry = event => {
-    setCountryData(event.target.value);
-  }
-  const onChangeWeb = event => {
-    setWebData(event.target.value);
-  }
+  const onChangeName = event => setNameData(event.target.value);
+  const onChangeCountry = event => setCountryData(event.target.value);
+  const onChangeAge = event => setAgeData(event.target.value);
 
-  const onClickSubmit = () => console.log('Clickeado');
+  const onClickSubmit = event => {
+    event.preventDefault();
+    console.log(`Name: ${nameData} / Country: ${countryData} / Web: ${ageData}`)
+  }
 
   return (
     <React.Fragment>
       <section className='form-container'>
-        <h1 className='form-container--title'>New Attendant</h1>
-        <form action="" className='form-container__fields'>
+        <h1 className='form-container--title'>Create your profile</h1>
+        <form onSubmit= {onClickSubmit} className='form-container__fields'>
 
           <div className='form-container__fields-block'>
             <label htmlFor="name" className='form-container__fields-text'>Full name</label>
@@ -46,24 +43,28 @@ function Form ( {nameData, setNameData, countryData, setCountryData, webData, se
           </div>
 
           <div className='form-container__fields-block'>
-            <label htmlFor="web" className='form-container__fields-text'>Your web page</label>
+            <label htmlFor="age" className='form-container__fields-text'>Your age</label>
             <input
-            type="text"
-            onChange = {onChangeWeb}
-            name='web'
-            id="web"
-            placeholder='example.com'
-            value={webData}
+            type="number"
+            onChange = {onChangeAge}
+            name='age'
+            id="age"
+            placeholder='26'
+            value={ageData}
             />
           </div>
 
+          <input 
+            type = 'submit'
+            value = 'Submit'
+            className='form-container-btn'
+          />
+          <input
+            type = 'reset'
+            value = 'Reset fields'
+            className='form-container-btn'
+          />
         </form>
-        <button 
-        type = 'button'
-        onClick = {onClickSubmit}
-        className='form-container-btn'
-        > Enviar
-        </button>
       </section>
     </React.Fragment>
   )

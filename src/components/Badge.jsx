@@ -7,8 +7,11 @@ function Badge (props) {
       <section className="badge">
         <div className='badge__top'></div>
         <div className="badge__user">
-          <img src="https://supportivy.com/wp-content/uploads/2020/08/dinosaur-pixel-art-Idees-designs-photo-16.png" src={props.userPicture} alt="Perfil" />
-          <h2>{props.userName}</h2>
+          {props.userPicture ?
+            <img src={props.userPicture} alt="Profile" />
+            : <img src="https://img.icons8.com/external-itim2101-lineal-itim2101/50/000000/external-world-search-itim2101-lineal-itim2101.png" alt="My profile"/>
+          }
+          <h2>{props.userName} {props.userLastName}</h2>
         </div>
         <div className="badge__data">
           <div className='badge__data-user'>
@@ -17,7 +20,7 @@ function Badge (props) {
             <img src="https://img.icons8.com/external-itim2101-lineal-itim2101/50/000000/external-world-search-itim2101-lineal-itim2101.png" alt="Worldwide" />
           </div>
         </div>
-        <p className='badge__footer'>{props.userWeb}</p>
+        <p className='badge__footer'>{props.userAge} years old</p>
       </section>
     </React.Fragment>
   )

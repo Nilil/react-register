@@ -3,6 +3,8 @@ import React from 'react';
 import {Layout} from '../components/Layout';
 import {Badge} from '../components/Badge';
 import {Form} from '../components/Form';
+// import {MyPic} from '../components/MyPicture';
+import {Assistant} from '../components/Assistant';
 
 import '../scss/Registration.scss';
 
@@ -10,7 +12,7 @@ function Registration () {
 
   const [nameData, setNameData] = React.useState('');
   const [countryData, setCountryData] = React.useState('');
-  const [webData, setWebData] = React.useState('');
+  const [ageData, setAgeData] = React.useState('');
 
   return (
     <React.Fragment>
@@ -22,13 +24,15 @@ function Registration () {
           <Form
             setNameData = {setNameData}
             setCountryData = {setCountryData}
-            setWebData = {setWebData}
+            setAgeData = {setAgeData}
           />
           <Badge
             userName = {nameData || 'User name'}
             userCountry = {countryData || 'Mexico'}
-            userWeb = {webData || '26'}
+            userAge = {ageData || '26'}
           />
+          {/* <MyPic/> */}
+          <Assistant/>
         </main>
       </Layout>
     </React.Fragment>

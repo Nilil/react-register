@@ -10,8 +10,6 @@ function Main () {
         <nav>
           <Link to="/registration">Resgistration</Link>
           <br/>
-          <Link to="/assistant">Assistants</Link>
-          <br/>
           <Link to="/404">Error</Link>
         </nav>
       </Layout>
