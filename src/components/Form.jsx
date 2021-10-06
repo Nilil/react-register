@@ -1,7 +1,12 @@
 import React from 'react';
+
+import {Modal} from './Portal';
+
 import '../scss/Form.scss';
 
 function Form ({nameData, setNameData, countryData, setCountryData, ageData, setAgeData}) {
+
+  const [modalStatus, setModalStatus] = React.useState('');
 
   const onChangeName = event => setNameData(event.target.value);
   const onChangeCountry = event => setCountryData(event.target.value);
@@ -9,6 +14,7 @@ function Form ({nameData, setNameData, countryData, setCountryData, ageData, set
 
   const onClickSubmit = event => {
     event.preventDefault();
+    setModalStatus(true);
     console.log(`Name: ${nameData} / Country: ${countryData} / Web: ${ageData}`)
   }
 
@@ -16,7 +22,9 @@ function Form ({nameData, setNameData, countryData, setCountryData, ageData, set
     <React.Fragment>
       <section className='form-container'>
         <h1 className='form-container--title'>Create your profile</h1>
-        <form onSubmit= {onClickSubmit} className='form-container__fields'>
+        <form 
+        onSubmit= {onClickSubmit}
+        className='form-container__fields'>
 
           <div className='form-container__fields-block'>
             <label htmlFor="name" className='form-container__fields-text'>Full name</label>
@@ -66,6 +74,11 @@ function Form ({nameData, setNameData, countryData, setCountryData, ageData, set
           />
         </form>
       </section>
+      { modalStatus &&
+      <Modal>
+        <h2>Modal</h2>
+      </Modal>
+      }
     </React.Fragment>
   )
 }
