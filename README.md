@@ -6,7 +6,7 @@ Creates a badge while you complete the fields required and show you multiple bad
 
 ### Links
 
-- Live: 
+- Live: [Link](https://react-19.vercel.app/ "Link")
 - Code: [Repository](https://github.com/Nilil/react-register "Repository")
 - API: [Random User](https://randomuser.me/ "Random User")
 
