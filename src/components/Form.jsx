@@ -1,12 +1,12 @@
 import React from 'react';
 
-import {Modal} from './Portal';
+// import {Modal} from './Portal';
 
 import '../scss/Form.scss';
 
 function Form ({nameData, setNameData, countryData, setCountryData, ageData, setAgeData}) {
 
-  const [modalStatus, setModalStatus] = React.useState('');
+  // const [modalStatus, setModalStatus] = React.useState('');
 
   const onChangeName = event => setNameData(event.target.value);
   const onChangeCountry = event => setCountryData(event.target.value);
@@ -14,8 +14,7 @@ function Form ({nameData, setNameData, countryData, setCountryData, ageData, set
 
   const onClickSubmit = event => {
     event.preventDefault();
-    setModalStatus(true);
-    console.log(`Name: ${nameData} / Country: ${countryData} / Web: ${ageData}`)
+    // setModalStatus(true);
   }
 
   return (
@@ -67,18 +66,16 @@ function Form ({nameData, setNameData, countryData, setCountryData, ageData, set
             value = 'Submit'
             className='form-container-btn'
           />
-          <input
-            type = 'reset'
-            value = 'Reset fields'
-            className='form-container-btn'
-          />
+          
         </form>
       </section>
-      { modalStatus &&
-      <Modal>
-        <h2>Modal</h2>
-      </Modal>
-      }
+      
+      {/* { modalStatus &&
+        <Modal>
+          <h2>Modal</h2>
+        </Modal>
+      } */}
+
     </React.Fragment>
   )
 }

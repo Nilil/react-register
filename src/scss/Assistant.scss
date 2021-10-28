@@ -1,0 +1,18 @@
+@use './variables/'as *;
+
+.new-pal {
+  display: flex;
+  justify-content: center;
+
+  &>button {
+    background-color: $color-text;
+    border-radius: 100px;
+    padding: 15px;
+    border: 1px solid $color-border;
+
+    &:hover {
+      background-color: $color-border;
+      border: 1px solid $color-text;
+    }
+  }
+}

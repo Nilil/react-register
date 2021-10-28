@@ -1,19 +1,14 @@
 import React from 'react';
 
-import {Link} from 'react-router-dom';
-
 import '../scss/Navbar.scss';
 
 function Navbar () {
   return (
     <React.Fragment>
-      <nav className='navigation'>
-        <Link to="/">
-          <img src="https://supportivy.com/wp-content/uploads/2020/08/dinosaur-pixel-art-Idees-designs-photo-16.png" alt="Logo" />
-          <span className='navigation__text-1'>Lorem</span>
-          <span className='navigation__text-2'>Ipsum</span>
-        </Link>
-      </nav>
+      <header className='navigation'>
+          <img src="https://img.icons8.com/external-sbts2018-outline-sbts2018/58/000000/external-add-friend-social-media-sbts2018-outline-sbts2018-2.png"  alt="Logo"/>
+          <span className='navigation__text-1'>Friend Finder</span>
+      </header>
     </React.Fragment>
   )
 }

@@ -1,24 +1,17 @@
+@use './variables/'as *;
+
 .navigation {
-  inline-size: 100%;
-
-  a {
-    text-decoration: none;
-
+  inline-size: 360px;
+  margin: 1% auto;
     img {
-      inline-size: 40px;
-    }
-  }
-
+      inline-size: 30px;
+      }
 
   &__text {
 
     &-1 {
-      color: aquamarine;
+      color: $color-text;
       margin: 0 5px;
-    }
-
-    &-2 {
-      color: lightcoral;
     }
   }
 }

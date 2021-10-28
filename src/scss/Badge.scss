@@ -1,17 +1,16 @@
-body {
-  background-color: grey;
-}
+@use './variables/'as *;
 
 .badge {
   block-size: auto;
-  inline-size: 90vw;
-  border: 1px solid pink;
+  inline-size: 360px;
+  margin: 1% auto;
+  border: 1px solid $color-border;
+  color: $color-text;
 
   &__top {
     inline-size: 100%;
     block-size: 5vh;
-    background-color: purple;
-    border-radius: 5%;
+    background-color: $color-border;
   }
 
   &__user {
@@ -27,7 +26,7 @@ body {
   }
 
   &__data {
-    background-color: lightpink;
+    background-color: $color-border;
     text-align: center;
 
     &-user {

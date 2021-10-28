@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 
 import {Badge} from './Badge';
 
+import '../scss/Assistant.scss';
+
 function Assistant () {
   const [user, setUser] = useState('');
   const [showBadge, setShowBadge] = useState('');
@@ -28,10 +30,13 @@ function Assistant () {
   return (
     <React.Fragment>
       <div>
+      <div className="new-pal">
         <button onClick={() => {
           getUser()
           getBadge()}}>
-          Show me a new pal!</button>
+          Show me a new pal!
+        </button>
+      </div>
           { showBadge &&
           <div>
             <Badge

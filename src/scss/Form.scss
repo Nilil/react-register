@@ -1,32 +1,37 @@
+@use './variables/'as *;
+
 .form-container {
   block-size: auto;
-  inline-size: 90vw;
-  border: 1px solid blue;
+  inline-size: 360px;
+  margin: 1% auto;
+  border: 1px solid $color-border;
+  position: relative;
 
   &--title {
     text-align: center;
+    color: $color-title
   }
 
   &__fields {
     display: block;
 
     &-block {
-      margin: 7% 0;
+      margin: 7% auto;
+      inline-size: 50%;
     }
 
     &-text {
       font-size: 16px;
       font-weight: bold;
-    }
-
-    & input {
-      margin-top: 3%;
-      inline-size: 90%;
+      color: $color-text;
     }
   }
 
   &-btn {
+    display: flex;
+    justify-content: center;
     block-size: 20px;
     inline-size: 50%;
+    margin: 7% auto;
   }
 }

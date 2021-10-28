@@ -1,8 +1,13 @@
+@use './variables/'as *;
+
 body {
+  background-color: $color-bg;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.header-bg img {
-  inline-size: 100%;
+.header-text {
+  text-align: center;
+  color: $color-title;
 }
