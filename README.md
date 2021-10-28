@@ -12,7 +12,7 @@ Creates a badge while you complete the fields required and show you multiple bad
 
 ### Preview
 
-IMG
+[![Friend Finder](https://i.imgur.com/xKenndE.png "Friend Finder")](https://i.imgur.com/xKenndE.png "Friend Finder")
 
 ### Built whit
 - React
